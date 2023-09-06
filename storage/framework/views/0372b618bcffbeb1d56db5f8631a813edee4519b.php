@@ -1,11 +1,11 @@
-@extends('layouts.main')
-@section('title','HDC Events')
-@section('js','/js/scripts.js')
-@section('content')
+
+<?php $__env->startSection('title','HDC Events'); ?>
+<?php $__env->startSection('js','/js/scripts.js'); ?>
+<?php $__env->startSection('content'); ?>
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1 class="fw-bold">Crie o seu evento</h1>
     <form action="/events" method="POST">
-        @csrf
+        <?php echo csrf_field(); ?>
         <div class="form-group mb-3">
             <label for="title">Evento:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
@@ -29,4 +29,5 @@
     </form>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\bruno\Desktop\Projetos\PHP\Evento\resources\views/events/create.blade.php ENDPATH**/ ?>

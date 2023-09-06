@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title')</title>
+        <title><?php echo $__env->yieldContent('title'); ?></title>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,10 +41,10 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    @if(session('msg'))
-                        <p class="msg">{{ session('msg') }}</p>
-                    @endif
-                    @yield('content')
+                    <?php if(session('msg')): ?>
+                        <p class="msg"><?php echo e(session('msg')); ?></p>
+                    <?php endif; ?>
+                    <?php echo $__env->yieldContent('content'); ?>
                 </div>
             </div>
         </main>
@@ -55,6 +55,7 @@
         </footer>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="@yield('js')"></script>
+        <script src="<?php echo $__env->yieldContent('js'); ?>"></script>
     </body>
 </html>
+<?php /**PATH C:\Users\bruno\Desktop\Projetos\PHP\Evento\resources\views/layouts/main.blade.php ENDPATH**/ ?>
