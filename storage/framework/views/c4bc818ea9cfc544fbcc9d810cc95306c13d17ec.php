@@ -15,7 +15,7 @@
             <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="col-md-3">
                 <div class="card">
-                    <img src="/img/event_placeholder.jpg" alt="<?php echo e($event->title); ?>">
+                    <img src="/img/events/<?php echo e($event->image); ?>" alt="<?php echo e($event->title); ?>">
                     <div class="card-body">
                         <p class="card-date">10/09/2020</p>
                         <h5 class="card-title"><?php echo e($event->title); ?></h5>
