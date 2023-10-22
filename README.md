@@ -3,6 +3,11 @@
 Esse sistema é um contrução em laravel que permite que usuario possa criar eventos <br>
 o Usuario pode cadastrar os eventos, alterar, deletar e visualizar
 
-
+##Tecnologias
+    PHP
+    
+#Como instalar
+    composer global require laravel/installer
+    php artisan serve
 
 
