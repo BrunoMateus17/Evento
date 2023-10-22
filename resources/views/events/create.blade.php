@@ -25,6 +25,18 @@
                 <option value="1">Sim</option>
             </select>
         </div>
+        <div class="for-group">
+            <label for="itens">Adicione itens de infraestrutura:</label>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Cadeiras"> Cadeiras
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Palco"> palco
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" id="items" value="Brindes"> Brindes
+            </div>
+        </div>
         <div class="form-group">
             <label for="title">Descrição:</label>
             <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
